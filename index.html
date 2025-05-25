@@ -6,6 +6,49 @@
   <title>Para A Mulher Mais Perfeita!💖</title>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Só um básico pra popup e coração funcionar aqui, pode colocar no style.css */
+    .popup {
+      display: none;
+      position: fixed;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1000;
+      max-width: 300px;
+      text-align: center;
+    }
+    .full-image-view {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right:0; bottom:0;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .full-image-view img {
+      max-width: 90vw;
+      max-height: 90vh;
+    }
+    .click-heart {
+      position: absolute;
+      font-size: 24px;
+      pointer-events: none;
+      user-select: none;
+      animation: pop 1s ease forwards;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+    }
+    @keyframes pop {
+      0% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+      100% { opacity: 0; transform: translate(-50%, -150%) scale(2); }
+    }
+  </style>
 </head>
 <body>
 
@@ -16,7 +59,7 @@
   <div class="music-cover">
     <img id="music-cover" src="https://i.postimg.cc/4dfyygXW/Whats-App-Image-2025-05-25-at-01-13-13-2.jpg" alt="Capa da Música" />
   </div>
-  <p class="music-name" id="music-name">Lisboa - ANAVITORIA</p>
+  <p class="music-name" id="music-name">Dona dos Meus Pensamentos - Charlie Brown Jr</p>
   <audio id="audio-player" controls autoplay>
     <source id="audio-source" src="https://files.catbox.moe/vc8oe6.mp3" type="audio/mpeg" />
     Seu navegador não suporta o elemento de áudio.
@@ -53,3 +96,4 @@
 <script src="script.js"></script>
 </body>
 </html>
+
