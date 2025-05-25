@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Para A Mulher Mais Perfeita!💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<h1>Para Você, Meu Amor 💕</h1>
+<p class="love-message">Cada Momento Ao Seu Lado Mostra O Quanto Eu Te Amo, E o Quanto Eu Sou Feliz Ao Seu Lado!❤</p>
+
+<div class="music-player">
+  <div class="music-cover">
+    <img id="music-cover" src="https://i.postimg.cc/4dfyygXW/Whats-App-Image-2025-05-25-at-01-13-13-2.jpg" alt="Capa da Música" />
+  </div>
+  <p class="music-name" id="music-name">Dona dos Meus Pensamentos - Charlie Brown Jr</p>
+  <audio id="audio-player" controls autoplay>
+    <source id="audio-source" src="https://files.catbox.moe/vc8oe6.mp3" type="audio/mpeg" />
+    Seu navegador não suporta o elemento de áudio.
+  </audio>
+  <div class="music-controls">
+    <button onclick="prevMusic()"> Voltar</button>
+    <button onclick="nextMusic()">Próxima</button>
+  </div>
+</div>
+
+<button class="love-note-btn" onclick="togglePopup()">💌 Ler Cartinha de Amor</button>
+
+<div class="popup" id="love-note-popup">
+  <h2>Para Voce minha Princesa! 💖</h2>
+  <p>Você é a luz que ilumina meus dias mais escuros.<br/>Com você, tudo é mais bonito e cheio de vida.<br/>Eu Te amo infinitamente! Meu Amorrrrrr</p>
+  <button onclick="togglePopup()">Fechar</button>
+</div>
+
+<div class="photo-gallery">
+  <h2>Momentos Juntos 📸</h2>
+  <div class="thumbnails">
+    <img src="https://i.postimg.cc/8PRh71GS/Whats-App-Image-2025-05-25-at-01-19-20.jpg" alt="Foto 1" onclick="openFullImage(this)" />
+    <img src="https://i.postimg.cc/tTFgB42R/Whats-App-Image-2025-05-25-at-01-19-20-1.jpg" alt="Foto 2" onclick="openFullImage(this)" />
+    <img src="https://i.postimg.cc/3RhhJCF7/Whats-App-Image-2025-05-25-at-01-19-20-2.jpg" alt="Foto 3" onclick="openFullImage(this)" />
+  </div>
+</div>
+
+<div class="full-image-view" id="full-image-view" onclick="closeFullImage()">
+  <img src="" alt="Imagem Ampliada" id="full-image" />
+</div>
+
+<canvas id="background-canvas"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>

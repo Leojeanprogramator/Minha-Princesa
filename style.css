@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%; /* em vez de height */
+  font-family: 'Dancing Script', cursive;
+  overflow-x: hidden;
+  background: #2c003e;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  overflow-y: auto; /* permite scroll vertical */
+}
+ cursive;
+  overflow-x: hidden;
+  background: #2c003e; /* tom roxo suave */
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 3em;
+  color: #ffb6c1;
+  margin-top: 30px;
+  text-shadow: 0 0 10px #ff99bb;
+}
+
+p.love-message {
+  font-size: 1.4em;
+  color: #ffccd9;
+  margin-bottom: 20px;
+  text-shadow: 0 0 6px #ff88aa;
+}
+
+.music-player, .gallery, .love-note-btn {
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 0 15px rgba(255, 182, 193, 0.4);
+  border-radius: 20px;
+  margin: 20px auto;
+  padding: 20px;
+  width: 280px;
+  transition: transform 0.3s ease;
+}
+
+.music-player:hover, .gallery:hover, .love-note-btn:hover {
+  transform: scale(1.05);
+}
+
+.music-cover img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #ff99bb;
+}
+
+audio {
+  width: 100%;
+  margin-top: 10px;
+  filter: invert(1);
+  border-radius: 15px;
+}
+
+p.music-name {
+  margin-top: 10px;
+  font-size: 1.1em;
+  color: #ffd1dc;
+  text-shadow: 0 0 8px #ff6699;
+}
+
+button {
+  background: #ff4d70;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 15px;
+  margin: 5px;
+  cursor: pointer;
+  color: white;
+  transition: background 0.3s ease;
+  box-shadow: 0 0 8px #ff4d70;
+}
+
+button:hover {
+  background: #ff7a9c;
+  box-shadow: 0 0 15px #ff7a9c;
+}
+
+.photo-gallery {
+  margin-top: 30px;
+}
+
+.photo-gallery h2 {
+  color: #ffb6c1;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #ff6699;
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.thumbnails img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.3s;
+  box-shadow: 0 0 6px #ff99bb;
+}
+
+.thumbnails img:hover {
+  border-color: #ff4d70;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ff4d70;
+}
+
+.full-image-view {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  cursor: zoom-out;
+}
+
+.full-image-view img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 20px;
+  box-shadow: 0 0 30px #ff7a9c;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 320px;
+  transform: translate(-50%, -50%);
+  background: #ffe6f0;
+  color: #800040;
+  padding: 25px 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px #ff99bb;
+  z-index: 1000;
+  animation: fadeIn 0.5s ease;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.popup h2 {
+  margin-top: 0;
+  font-family: 'Dancing Script', cursive;
+}
+
+.popup button {
+  background: #800040;
+  color: white;
+  margin-top: 20px;
+  box-shadow: 0 0 15px #800040;
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -60%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+.click-heart {
+  position: absolute;
+  font-size: 2em;
+  color: #ff6699;
+  animation: floatUp 1s ease forwards;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1500;
+}
+
+@keyframes floatUp {
+  0% { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(-120px) scale(1.5); }
+}
+
+/* Canvas full screen */
+canvas#background-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+}
+
